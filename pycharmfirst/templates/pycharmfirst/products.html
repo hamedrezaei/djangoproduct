@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+    <table class="table" >
+    <tr>
+  <th>NAME</th>
+
+  <th>Model</th>
+{#  <th>header3</th>#}
+{#  <th>header4</th>#}
+</tr>
+{% if cat %}
+    {% for product in  cat.product_set.all %}
+        <tr>
+        <th>
+       {{ product.product_name  }}
+        </th>
+
+        <th><a >{{ product.product_model  }}</a></th>
+        </tr>
+    {% endfor %}
+{% else %}
+{% endif %}
+ </table>
+{% endblock %}
+

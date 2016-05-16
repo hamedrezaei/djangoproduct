@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form action="{% url 'pycharmfirst:addcategory' 0 %}" method="post">
+{% csrf_token %}
+<input id="cat_name" type="text" name="cat_name">
+<input type="submit" value="Save">
+</form>
+{% endblock %}
